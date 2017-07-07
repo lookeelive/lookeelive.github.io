@@ -22,7 +22,7 @@
 
   <body>
 
-    <video id="videoPlayer" class="video-js" controls preload="auto" width="100%" height="100%">
+    <video id="videoPlayer" class="video-js" controls preload="auto" width="100%" height="100%" data-setup="{}">
       <source src="http://tlporigin1.cloudapp.net/cdn/livestream.m3u8" type="application/x-mpegURL">
     </video>
 
@@ -33,8 +33,8 @@
     <script src="js/videojs-contrib-quality-levels.js"></script>
 
     <script>
-      var player = videojs('videoPlayer').qualityLevels();
-      // player.qualityLevels();
+      var player = videojs('videoPlayer');
+      player.qualityLevels();
       player.play();
     </script>
 
