@@ -34,7 +34,10 @@
 
     <script>
       var player = videojs('videoPlayer');
-      player.qualityLevels();
+      player.on('ready', function() {
+        this.qualityLevels();;
+      });
+      // player.qualityLevels();
       player.play();
     </script>
 
